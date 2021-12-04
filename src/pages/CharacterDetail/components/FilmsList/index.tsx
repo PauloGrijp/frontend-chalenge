@@ -9,7 +9,9 @@ function FilmsList({ films }: FilmsProps) {
     <div>
       <p>Filmes</p>
       <ul>
-        <FilmItem name="nome do filme"/>
+        {films.map((film) => (
+          <FilmItem name={film}/>
+        ))}
       </ul>
     </div>
   );
