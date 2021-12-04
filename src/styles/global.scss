@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+
+  --gray-50: #e1e1e6;
+  --gray-300: #a8a8b3;
+  --gray-700: #323238;
+  --gray-800: #29292e;
+  --gray-850: #19191a;
+  --gray-900: #121214;
+
+  --cyan-500: #20a1dd;
+  --yellow-500: #eba417;
+}
+
+body {
+  background: var(--gray-900);
+  color: var(--white);
+}
+
+body, input, textarea, button {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
