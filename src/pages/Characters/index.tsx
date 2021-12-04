@@ -53,7 +53,12 @@ function Characters() {
         <div className="container-character">
           <Title title="Catálogo" />
           <CharactersList characters={characters.results}/>
-          <Pagination />
+          <Pagination
+            nextIsDisabled={isNextDisabled}
+            prevIsDisabled={isPrevDisabled}
+            onNextPage={handleNextPagination}
+            onPrevPage={handlePrevPagination}
+          />
         </div>
       )}
     </>
