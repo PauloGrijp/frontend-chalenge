@@ -1,13 +1,14 @@
+import { SingleCharacterData } from '../../../../interfaces/IStarWars';
 import DetailItem from '../DetailItem';
 
 interface DetailListProps {
-  infoDetail: string;
+  infoDetail: SingleCharacterData;
 }
 
 function DetailList({ infoDetail }: DetailListProps) {
   return (
     <ul>
-      <DetailItem info="item 1" />
+      <DetailItem title="name" description={infoDetail.name} />
     </ul>
   );
 }

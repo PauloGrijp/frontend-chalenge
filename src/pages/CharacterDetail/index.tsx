@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 import Button from "../../components/Button";
+import Loading from "../../components/Loading";
 import Stars from "../../components/Stars";
 import Title from "../../components/Title";
 import { SingleCharacterData } from "../../interfaces/IStarWars";
@@ -13,9 +14,15 @@ import DetailList from "./components/DetailList";
 function CharacterDetail() {
   const { id } = useParams();
   const [character, setCharacter] = useState<SingleCharacterData>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getCharacter(id).then(response => setCharacter(response))
+    setIsLoading(true)
+    getCharacter(id)
+      .then(response => {
+        setCharacter(response);
+        setIsLoading(false)
+      })
   }, []);
 
   console.log(character)
@@ -23,15 +30,18 @@ function CharacterDetail() {
   return (
     <>
       <Stars />
-      <div className="container-detail">
-        <Title title="Descrição" />
-        <DetailList infoDetail=""/>
-        <Button
-          title="Voltar"
-          onPagination={() => {}}
-          isDisabled={false}
-        />
-      </div>
+      {isLoading ? (<Loading />) : (
+        character && ( 
+        <div className="container-detail">
+          <Title title="Descrição" />
+          <DetailList infoDetail={character}/>
+          <Button
+            title="Voltar"
+            onPagination={() => {}}
+            isDisabled={false}
+          />
+        </div>)
+      )}
     </>
   );
 }

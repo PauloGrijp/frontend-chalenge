@@ -1,11 +1,15 @@
 
 interface DetaiItemProps {
-  info: string;
+  title: string;
+  description: string | Array<string>
 }
 
-function DetailItem({ info }: DetaiItemProps) {
+function DetailItem({ title, description }: DetaiItemProps) {
   return (
-    <li>{info}</li>
+    <li>
+      <span>{title}</span>
+      <span>{description}</span>
+    </li>
   );
 }
 
