@@ -19,7 +19,7 @@ function DetailList({ infoDetail }: DetailListProps) {
       <DetailItem title="Peso" description={infoDetail.mass} />
       <DetailItem title="Skin" description={infoDetail.skin_color} />
       <DetailItem title="Espécie" description={infoDetail.species} />
-      <FilmsList films={[]}/>     
+      <FilmsList films={infoDetail.films}/>     
     </ul>
   );
 }
