@@ -1,8 +1,13 @@
+import { Routes, Route } from 'react-router-dom';
+import CharacterDetail from './pages/CharacterDetail';
+import Characters from './pages/Characters';
+
 function App() {
   return (
-    <div>
-     <h1>App</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Characters />}/>
+      <Route path="/character/:id" element={<CharacterDetail />}/>
+    </Routes>
   );
 }
 
