@@ -1,7 +1,16 @@
+import Stars from "../../components/Stars";
+import Title from "../../components/Title";
+
+import './characterDetail.scss';
+
 function CharacterDetail() {
   return (
     <>
-      <h1>CharacterDetail</h1>
+      <Stars />
+      <div className="container-detail">
+        <Title title="Descrição" />
+
+      </div>
     </>
   );
 }
