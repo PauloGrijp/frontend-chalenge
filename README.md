@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Desafio Técnico - mLearn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  Contruir uma aplicação utilizando a api do star wars que renderizasse uma lista de personagens e uma página de detalhes do personagem; 
+  
+## Desafios na resolução do projeto:
+  
+  * O primeiro desafio que encontrei foi em lidar com a prórpia api. Foi necessário realizar muitas requisições para mostrar o conteúdo pedido;
+  * Um desafio, agora proposto por mim mesmo, foi desenvolver a aplicação com typescript;
 
-## Available Scripts
+## Demonstração
+  
+  Dê o play para assistir
 
-In the project directory, you can run:
+https://user-images.githubusercontent.com/78037936/144724219-11110a75-5453-45d0-83e1-b27572c1823e.mp4
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Rodando a aplicação
 
-### `yarn test`
+```
+  # Primeiro, com o terminal aberto, clone este reposiório para seu computador
+  
+    git clone git@github.com:PauloGrijp/frontend-chalenge.git
+    
+  # Entre na pasta criada 
+    
+    cd frontend-chaleng
+    
+  # Agora, dentro da pasta criada, rode os comandos abaixo para instalar as dependências:
+   
+    yarn ou npm install
+    
+  # Após concluído a instalação, execute o seguinte comando para rodar a aplicação:
+  
+    yarn start ou npm start
+    
+  # A será executada na rota http://localhost:3000
+    
+```
+   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
