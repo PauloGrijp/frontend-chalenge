@@ -18,8 +18,6 @@ function Characters() {
       });
   }, []);
 
-  console.log(characters)
-
   return (
     <>
       <Stars />
