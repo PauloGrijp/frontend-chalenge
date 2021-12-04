@@ -1,19 +1,17 @@
+import { Character } from "../../interfaces/IStarWars";
 import SingleCharacter from "../SingleCharacter";
 
 interface CharactersListProps {
-  characters: string;
+  characters: Character[];
 }
 
 function CharactersList({ characters }: CharactersListProps) {
   return (
     <ul>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
-      <SingleCharacter character=""/>
+      {characters.map((character) => (
+        <SingleCharacter key={character.name} character={character}/>
+      ))}
+     
     </ul>
   );
 }

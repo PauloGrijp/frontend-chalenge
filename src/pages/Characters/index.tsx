@@ -25,7 +25,7 @@ function Characters() {
       <Stars />
       <div className="container-character">
         <Title title="Catálogo" />
-        <CharactersList characters=""/>
+        <CharactersList characters={characters.results}/>
         <Pagination />
       </div>
     </>
