@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import CharactersList from "../../components/CharactersList";
+import CharactersList from "./components/CharactersList";
 import Loading from "../../components/Loading";
-import Pagination from "../../components/Pagination";
+import Pagination from "./components/Pagination";
 import Stars from "../../components/Stars";
 import Title from "../../components/Title";
 import { CharactersData } from "../../interfaces/IStarWars";
