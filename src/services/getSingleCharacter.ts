@@ -10,7 +10,7 @@ export async function getCharacter(id?: string) {
   if (response.data.species.length === 0) {
     getSpeacieName = ''
   } else {
-    getSpeacieName = await axios.get(response.data.species[0]);
+    getSpeacieName = await (await axios.get(response.data.species[0])).data.name;
   }
   const getHomeWord = await axios.get(response.data.homeworld);
   const getFilmsName = await getFilms(response.data.films);
