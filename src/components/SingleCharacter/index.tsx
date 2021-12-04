@@ -1,5 +1,6 @@
 import { Character } from "../../interfaces/IStarWars";
 
+import './singleCharacter.scss';
 
 interface SingleCharacterProps {
   character: Character;
@@ -7,9 +8,11 @@ interface SingleCharacterProps {
 
 function SingleCharacter({ character }: SingleCharacterProps) {
   return (
-    <li>
-      <p>{character.name} - {character.species}</p>
-      <p>{character.birth_year}</p>
+    <li className="single-character">
+      <a href={`/character/${character.id}`}>
+        <p>{character.name} - {character.species}</p>
+        <p>{character.birth_year}</p>
+      </a>
     </li>
   );
 }

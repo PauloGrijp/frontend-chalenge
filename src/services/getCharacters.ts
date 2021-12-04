@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { CharactersData } from '../interfaces/IStarWars';
+import { setIdCharacter } from '../util/setIdCharacter';
 import { getSpeciesName } from './getSpeciesName';
 
 export async function getAllCharacters(url?: string) { 
   let response;
-  
+
   if (url) {
     response = await axios.get<CharactersData>(url);
   } else {
@@ -14,11 +15,14 @@ export async function getAllCharacters(url?: string) {
   const { count, next, previous, results } = response.data
 
   const charactersWithSpeciesName = await getSpeciesName(results);
+  const charactersWithId = setIdCharacter(charactersWithSpeciesName)
+
+  console.log(charactersWithId)
 
   return {
     count,
     next,
     previous,
-    results: charactersWithSpeciesName
+    results: charactersWithId,
   }
 }
