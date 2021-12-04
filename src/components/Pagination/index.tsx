@@ -1,6 +1,6 @@
 import Button from '../Button';
 
-function Footer() {
+function Pagination() {
   return (
     <footer>
       <Button
@@ -13,4 +13,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Pagination;
