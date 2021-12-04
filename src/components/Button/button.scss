@@ -7,6 +7,12 @@
   background-color: var(--yellow-500);
   color: var(--gray-900);
 
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
   &:disabled {
     background-color: transparent;
     color: var(--gray-700);
