@@ -1,10 +1,15 @@
 import Stars from "../../components/Stars";
+import Title from "../../components/Title";
+import './character.scss'
 
 function Characters() {
   return (
     <>
       <Stars />
-      <h1>Characters</h1>
+      <div className="container-character">
+        <Title title="Catálogo" />
+
+      </div>
     </>
   );
 }
