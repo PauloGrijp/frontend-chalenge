@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import DetailItem from '../DetailItem';
 
 interface DetailListProps {
