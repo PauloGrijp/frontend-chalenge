@@ -12,6 +12,8 @@ function Characters() {
   const [characters, setCharacters] = useState<CharactersData>(
     [] as unknown as CharactersData);
     const [isLoading, setIsLoading] = useState(true);
+    const [isPrevDisabled, setIsPrevDisabled] = useState(true);
+    const [isNextDisabled, setIsNextDisabled] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,6 +23,28 @@ function Characters() {
         setIsLoading(false);
       });
   }, []);
+
+  async function handleNextPagination() {
+    setIsLoading(true)
+    characters?.next && await getAllCharacters(characters.next)
+      .then(response => {
+        setCharacters(response)
+        setIsNextDisabled(!response.next);
+        setIsPrevDisabled(!response.previous);
+        setIsLoading(false)
+      });
+  }
+
+  async function handlePrevPagination() {
+    setIsLoading(true);
+    characters?.previous && await getAllCharacters(characters.previous)
+      .then(response => {
+        setCharacters(response);
+        setIsPrevDisabled(!response.previous);
+        setIsNextDisabled(!response.next);
+        setIsLoading(false)
+      });
+  }
 
   return (
     <>
