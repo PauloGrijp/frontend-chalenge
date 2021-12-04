@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import Button from "../../components/Button";
 import Stars from "../../components/Stars";
 import Title from "../../components/Title";
+import { SingleCharacterData } from "../../interfaces/IStarWars";
 import { getCharacter } from "../../services/getSingleCharacter";
 
 import './characterDetail.scss';
@@ -11,7 +12,7 @@ import DetailList from "./components/DetailList";
 
 function CharacterDetail() {
   const { id } = useParams();
-  const [character, setCharacter] = useState();
+  const [character, setCharacter] = useState<SingleCharacterData>();
 
   useEffect(() => {
     getCharacter(id).then(response => setCharacter(response))
