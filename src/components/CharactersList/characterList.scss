@@ -1,0 +1,7 @@
+.character-list {
+  text-align: center;
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
