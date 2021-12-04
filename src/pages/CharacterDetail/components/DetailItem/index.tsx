@@ -1,3 +1,4 @@
+import './detailItem.scss';
 
 interface DetaiItemProps {
   title: string;
@@ -6,8 +7,8 @@ interface DetaiItemProps {
 
 function DetailItem({ title, description }: DetaiItemProps) {
   return (
-    <li>
-      <span>{title}</span>
+    <li className="detail-item">
+      <span>{title}:</span>
       <span>{description}</span>
     </li>
   );

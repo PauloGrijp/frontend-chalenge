@@ -2,6 +2,7 @@ import { SingleCharacterData } from '../../../../interfaces/IStarWars';
 import DetailItem from '../DetailItem';
 import FilmsList from '../FilmsList';
 
+
 interface DetailListProps {
   infoDetail: SingleCharacterData;
 }
