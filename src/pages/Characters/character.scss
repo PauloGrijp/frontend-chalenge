@@ -6,4 +6,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 640px) {
+    height: 100vh;
+    p {
+      font-size: 1.2rem;
+    }
+    button {
+      margin: 1.5rem 3rem;
+    }
+  }
+
+  @media (min-width: 940px) {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.3rem;      
+    }
+
+    button {
+      padding: 0.5rem 2rem;
+      font-size: 1.3rem;
+      margin: 2rem 3rem;
+    }
+  }
 }

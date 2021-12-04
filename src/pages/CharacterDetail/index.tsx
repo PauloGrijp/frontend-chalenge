@@ -30,8 +30,6 @@ function CharacterDetail() {
     navigate('/');
   }
 
-  console.log(character)
-
   return (
     <>
       <Stars />

@@ -3,4 +3,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0.4rem 1rem;
+
+  @media (min-width: 640px) {
+    width: 25rem;
+  }
+
+  @media (min-width: 940px) {
+    width: 30rem;
+  }
 }
