@@ -18,12 +18,12 @@ function Pagination({
       <Button
         title="Prev"
         isDisabled={prevIsDisabled}
-        onPagination={onPrevPage}
+        onClick={onPrevPage}
       />
       <Button
         title="Next"
         isDisabled={nextIsDisabled}
-        onPagination={onNextPage}
+        onClick={onNextPage}
       />
     </footer>
   );

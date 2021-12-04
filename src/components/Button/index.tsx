@@ -3,15 +3,16 @@ import './button.scss';
 interface ButtonProps {
   title: string;
   isDisabled: boolean;
-  onPagination: () => void;
+  onClick: () => void;
 }
 
-function Button({ title, onPagination, isDisabled }: ButtonProps) {
+function Button({ title, onClick, isDisabled }: ButtonProps) {
   return (
     <button
-    onClick={onPagination}
-    disabled={isDisabled}
-    className="btn">
+      onClick={onClick}
+      disabled={isDisabled}
+      className="btn"
+    >
       {title}
     </button>
   );

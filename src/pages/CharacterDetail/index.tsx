@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 
 import Button from "../../components/Button";
 import Loading from "../../components/Loading";
@@ -12,6 +12,7 @@ import './characterDetail.scss';
 import DetailList from "./components/DetailList";
 
 function CharacterDetail() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [character, setCharacter] = useState<SingleCharacterData>();
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +26,10 @@ function CharacterDetail() {
       })
   }, []);
 
+  function handleRedirect() {
+    navigate('/');
+  }
+
   console.log(character)
 
   return (
@@ -37,7 +42,7 @@ function CharacterDetail() {
           <DetailList infoDetail={character}/>
           <Button
             title="Voltar"
-            onPagination={() => {}}
+            onClick={handleRedirect}
             isDisabled={false}
           />
         </div>)
